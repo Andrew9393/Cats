@@ -1,0 +1,1 @@
+.voting{background:#fff;border-radius:20px;display:flex;flex-direction:column;padding:20px}.voting__like{width:80px;height:80px;background:#000}.voting__favor{width:80px;height:80px}.voting__dislike{width:80px;height:80px}.voting__btn-actions{display:inline-block;margin:0 auto;border-radius:20px}
