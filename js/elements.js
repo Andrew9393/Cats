@@ -1,4 +1,3 @@
-console.log('cl');
 window.addEventListener("load", function(){
   let select = function(){
     let selectHeader = document.querySelectorAll('.select__header')
@@ -26,3 +25,25 @@ window.addEventListener("load", function(){
   }
   select()
 })
+
+$(document).ready(function(){
+  $('.info-slider').slick({
+    dots: true,
+    arrows:false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+  }); 
+
+  $('.btn-upload').click(() => {
+    $('.modal-upload').addClass('modal-upload__active')
+    $('body').addClass('body__active')
+  })
+
+  $('.btn-close').click(() => {
+    $('.modal-upload').removeClass('modal-upload__active')
+    $('body').removeClass('body__active')
+  })
+})
+

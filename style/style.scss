@@ -4,11 +4,37 @@
 @import 'elements.scss';
 
 
+html,
+body{
+  overflow-x: hidden;
+
+}
+
+.body__active{
+  position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 22;
+    }
+  
+}
+
 body{
   background: #E5E5E5;
   font-family: 'Jost', sans-serif;
   font-weight: 500;
   color: $color-text;
+}
+
+button{
+  cursor: pointer;
 }
 
 .wrap__container-right__body{
@@ -38,26 +64,33 @@ body{
   color: $color-text;
 }
 
+
+
 .wrap {
   display: flex;
   justify-content: flex-end;
+  flex-direction: column;
 
   &__container-left {
-    flex: 0 0 500px;
+    // flex: 0 0 500px;
     position: fixed;
-    right: 770px;
+    right:830px;
   }
 
   // .wrap__container
 
   &__container-right {
-    flex: 0 0 680px;
+    max-width: 680px;
     padding: 30px 30px 0 0;
-
+    margin-left: auto;
     
     &.color_bg{
-      position: relative;
+      position: absolute;
       padding: 0px 0px 0 0;
+      right: 0;
+      top: 0px;
+      bottom: 0;
+      overflow: hidden;
 
 
       &::after{
@@ -87,11 +120,23 @@ a{
   cursor: pointer;
 
 }
+.bb{
+  font-weight: 500;
+  color: $color-text;
+}
 
 .btn-title{
   background: $red;
   color: #fff;
   padding: 10px 30px;
+}
+
+.btn-close{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .btn-upload{
@@ -113,6 +158,13 @@ a{
     display: flex; 
     align-items: center;
     gap: 10px;
+
+    &__coun-id{
+      color: #fff;
+      background: $red;
+      border-radius: 10px;
+      padding: 10px 30px;
+    }
 }
 .icon-sort-up, .icon-sort-down{
   position: relative;
@@ -152,15 +204,19 @@ a{
   }
 }
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  background: #e5e5e5;
+  z-index: 20;
+
   
   // .header__container
   
   &__container {
     max-width: 1293px;
     display: flex;
-    margin: 0 auto;
-    padding: 30px 0;
+    margin-left: auto;
+    padding: 30px 30px 0 30px;
   }
 
   // .header__logo
@@ -358,3 +414,81 @@ a{
   }
 }
 
+.info {
+  position: relative;
+  margin-top: 50px;
+  padding: 25px 40px 40px 40px;
+  border-radius: 20px;
+  border: 2px solid $red-hover;
+		// .info__name
+
+		&__name {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      background: #fff;
+      transform: translate(-50%, -50%);
+      padding: 5px 40px;
+      border-radius: 20px;
+      font-size: 36px;
+      line-height: calc(52 / 36) * 100%;
+      font-weight: 500;
+		}
+
+		// .info__subtitle
+
+		&__subtitle {
+      text-align: center;
+      color: $text-grey;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: calc(29 / 20) * 100%;
+      margin-bottom: 20px;
+		}
+
+		// .info__characteristics
+
+		&__characteristics {
+      display: flex;
+      justify-content: space-between;
+		}
+
+		// .info__l
+
+		&__l {
+      width: 48%;
+		}
+
+		// .info__item
+
+		&__item:not(:last-child) {
+      margin-bottom: 10px;
+		}
+
+		// .info__characteristics-title
+
+		&__characteristics-title {
+      font-size: 16px;
+      line-height: (23 / 16) * 100%;
+      font-weight: 500;
+      font-family: 'Jost';
+		}
+
+		// .info__characteristics-text
+
+		&__characteristics-text {
+      margin-top: 0;
+      font-size: 16px;
+      line-height: (23 / 16) * 100%;
+      font-weight: 400;
+      font-family: 'Jost';
+      color: $text-grey;
+		}
+
+		// .info__r
+
+		&__r {
+      width: 48%;
+
+		}
+}

@@ -7,3 +7,9 @@ $purpur: #B4B7FF;
 $color-text: #1D1D1D;
 $text-grey: #8C8C8C;
 $bg-grey: #F8F8F7;
+
+@mixin ff-grey () {
+  font-weight: 400;
+  font-size: 20px;
+  color: $text-grey;
+}

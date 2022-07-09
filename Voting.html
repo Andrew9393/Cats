@@ -14,17 +14,26 @@
 </head>
 <body >
   <div class="wrap">
-    <div class="wrap__container-left">
-    <header class="header">
-      <div class="header__container">
-        <div class="header__logo">
-          <a href="/"><img src="./image/logo.png" alt="Logo"></a>
+   
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="/"><img src="./image/logo.png" alt="Logo"></a>
+          </div>
+          <div class="header__actiions">
+          <form action="#" class="search-header">
+            <input type="text" placeholder="Search for breeds by name" class="search-header__input">
+            <button class="search-header__btn icon-search"></button>
+          </form>
+          <button class="header__actiions-like icon-like btn-header"></button>
+          <button class="header__actiions-favorite icon-favorite btn-header"></button>
+          <button class="header__actiions-dislike icon-dislike btn-header"></button>
+          </div>
         </div>
-        
-      </div>
-    </header> 
+      </header>
     <main class="main">
-      <div class="main__container">
+      <div class="wrap__container-left">
+        <div class="main__container">
         <div class="main__fix-block">
           <h2 class="main__title">
             Hi intern!
@@ -52,23 +61,15 @@
               <div class="main__img bg-yellow">
                 <img src="./image/images-search.png" alt="">
               </div>
-              <div class="main__btn btn">GALLERY</div>
+              <a href="Gallery.html"><div class="main__btn btn">GALLERY</div></a>
             </div>
           </div>
         </div>
         </div>
       </div>
-    </main>
+    
     <div class="wrap__container-right">
-      <div class="header__actiions">
-        <form action="#" class="search-header">
-          <input type="text" placeholder="Search for breeds by name" class="search-header__input">
-          <button class="search-header__btn icon-search"></button>
-        </form>
-        <button class="header__actiions-like icon-like btn-header"></button>
-        <button class="header__actiions-favorite icon-favorite btn-header"></button>
-        <button class="header__actiions-dislike icon-dislike btn-header"></button>
-      </div>
+     
       <div class="wrap__container-right__body voting">
         <div class="voting__btn-navigate btn-navigate">
           <button class="btn btn-back icon-arrow-back"></button>
@@ -101,6 +102,7 @@
         </div>
       </div>
     </div>
+  </main>
   </div>
 </body>
 </html>
