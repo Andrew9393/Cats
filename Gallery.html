@@ -76,7 +76,7 @@
       
       <div class="wrap__container-right__body">
         <div class="btn-navigate">
-          <button class="btn btn-back icon-arrow-back"></button>
+          <button class="btn btn-back icon-arrow-back" onclick="history.back();return false;"></button>
           <button class="btn btn-title">GALLERY</button> 
           <button class="btn btn-upload icon-upload">UPLOAD</button> 
             <div class="modal-upload">
@@ -207,7 +207,7 @@
         
 
           <div class="gallery">
-            <div class="gellery__item-r gallery__item ">
+            <!-- <div class="gellery__item-r gallery__item ">
               <div class="gallery__img">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUWngfzz7i75Bs9hAk1p7kLki4bntM2Sf2Xg&usqp=CAU" alt="">
               </div>
@@ -279,7 +279,7 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE2eUrKM9s_kf2HtuYmMEBTugn2hNvtje4SQ&usqp=CAU" alt="">
               </div>
               <button class="gallery__button gallery__btn-favorite icon-favorite"></button>
-            </div>
+            </div> -->
             
           </div>
 
@@ -288,7 +288,8 @@
   </main>
   </div>
 
-  <script src="./js/elements.js"></script>
+  <script defer src="./js/elements.js"></script>
+  <script defer src="./js/http.js"></script>
 
 </body>
 </html>
