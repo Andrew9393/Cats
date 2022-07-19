@@ -43,17 +43,17 @@ class CatsItem{
             <div class="gallery__img">
             <img src="${el.image.url}" alt="${el.name}">
             </div>
-            <a class="gallery__button btn" onClick="catsItem.getCatInfo('${el.name}')" href="/Breeds/Breeds-info.html">${el.name}</a>
+            <a class="gallery__button btn" onClick="catsItem.getCatInfo('${el.name}')" href="../Cats/Breeds/Breeds-info.html">${el.name}</a>
           </div>
         `
         let selectItem = `
           <div class="select__item">${el.name}</div>
         `
 
-        if(location.pathname === "/Gallery.html"){
+        if(location.pathname === "/Cats/Gallery.html"){
           gallery.insertAdjacentHTML('afterbegin', tempItem)
         }
-        if(location.pathname === "/Breeds.html"){
+        if(location.pathname === "/Cats/Breeds.html"){
           selectBody.insertAdjacentHTML('beforeEnd', selectItem)
           gallery.insertAdjacentHTML('afterbegin', tempItemBreeds)
         }
@@ -117,6 +117,6 @@ class CatsItem{
 
 const catsItem = new CatsItem()
 catsItem.render()
-if(location.pathname === "/Breeds/Breeds-info.html"){
+if(location.pathname === "/Cats/Breeds/Breeds-info.html"){
   catsItem.getCatInfo(localStorage.getItem('nameInfo'))
 }
